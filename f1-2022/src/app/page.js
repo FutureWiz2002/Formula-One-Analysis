@@ -1,6 +1,6 @@
 import Chart from 'chart.js/auto';
 // import Constructors from "../../images/Constructors.svg"
-import { ReactComponent as Logo } from '../../images/Constructors.svg';
+import { ReactComponent as Logo } from "./images/";
 
 
 export default function Home() {
@@ -12,7 +12,8 @@ export default function Home() {
     </div>
     <div className='slate-100 rounded-xl p-8 m-5 dark:bg-slate-800'>
       <h1>Team Analysis</h1>
-      <img src={Logo} width={500} height={500} />
+      {/* <img src={Logo} width={500} height={500} /> */}
+      <Logo />
     </div>
     <div className='slate-100 rounded-xl p-8 m-5 dark:bg-slate-800'>
       <h1>Driver Analysis</h1>
