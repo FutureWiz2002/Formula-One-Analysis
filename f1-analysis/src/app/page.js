@@ -8,8 +8,8 @@ export default function Home() {
          <option value="Max Verstappen">Max Verstappen</option>
          <option value="Sergio Perez">Sergio</option>
          <option value="Charles Leclerc">Charles Leclerc</option>
-         <option value="Carlos Sainz">Max Verstappen</option>
-         <option value="Goerge Russell">Max Verstappen</option>
+         <option value="Carlos Sainz">Carlos Sainz</option>
+         <option value="Goerge Russell">Goerge Russell</option>
          <option value="Lewis Hamilton">Max Verstappen</option>
          <option value="Esteban Ocon">Max Verstappen</option>
          <option value="Pierre Gasly">Max Verstappen</option>
