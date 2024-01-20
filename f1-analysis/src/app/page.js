@@ -85,8 +85,7 @@ export default function Home() {
          <option value="Alex Albon">Alex Albon</option>
       </select>
       <div className='h-90 w-90'>
-        <Line
-          
+        <Line 
           data = {chartData}   
         />
       </div>
