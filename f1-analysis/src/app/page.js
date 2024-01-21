@@ -23,13 +23,23 @@ const allDriverData = {
     'Daniel Riciardo': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
     'Valterri Bottas': [8, 0, 4, 10, 6, 8, 2, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0],
     'Zhou Guanyu': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
-    'Fernanado Alonso': [2, 0, 0, 0, 0, 2, 6, 6, 2, 10, 1, 8, 4, 10, 8, 0, 0, 6, 6, 0, 10, 0],
+    'Fernando Alonso': [2, 0, 0, 0, 0, 2, 6, 6, 2, 10, 1, 8, 4, 10, 8, 0, 0, 6, 6, 0, 10, 0],
     'Lance Stroll': [0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 8, 0, 0, 0, 1, 4],
     'Logan Sergeant': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
     'Alex Albon': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
     '':[]
- 
-}
+
+  }
+
+const chartOptions = {
+  scales: {
+    y: {
+      max: 27,
+      beginAtZero: true,
+    },
+  },
+};
+
 
 // This function renders the home page
 
@@ -50,7 +60,7 @@ export default function Home() {
     setDriver(selectedDriver)
     console.log(driver)
     setChartData({
-      labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
+      labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
       datasets: [
         {
           label:selectedDriver,
@@ -60,37 +70,39 @@ export default function Home() {
     })
   }
 
-
-
   return (
-    <div>
-      <p>A Comprehensive F1 analysis for 2023</p>
-      <p>{driver}</p>
-      <select value={driver} onChange={changeDriver}>
-        <option value=" "></option>
-        <option value="Max Verstappen">Max Verstappen</option>
-        <option value="Sergio Perez">Sergio</option>
-        <option value="Charles Leclerc">Charles Leclerc</option>
-        <option value="Carlos Sainz">Carlos Sainz</option>
-        <option value="George Russell">George Russell</option>
-        <option value="Lewis Hamilton">Lewis Hamilton</option>
-        <option value="Esteban Ocon">Esteban Ocon</option>
-        <option value="Pierre Gasly">Pierre Gasly</option>
-        <option value="Lando Norris">Lando Norris</option>
-        <option value="Oscar Piastri">Oscar Piastri</option>
-        <option value="Nico Hulkenberg">Nico Hulkenberg</option>
-        <option value="Kevin Magnussen">Kevin Magnussen</option>
-        <option value="Yuki Tsunoda">Yuki Tsunoda</option>
-        <option value="Daniel Riciardo">Daniel Riciardo</option>
-        <option value="Valterri Bottas">Valterri Bottas</option>
-        <option value="Zhou Guanyu">Zhou Guanyu</option>
-        <option value="Fernando Alonso">Fernando Alonso</option>
-        <option value="Lance Stroll">Lance Stroll</option>
-        <option value="Logan Sergeant">Logan Sergeant</option>
-        <option value="Alex Albon">Alex Albon</option>
-      </select>
-      <div className='h-90 w-90'>
-        <Line data={chartData} />
+    <div className='font-sans bg-[#cbd5e1]'>
+      <h1 className='text-4xl p-5 text-center bg-[#cffafe]'>A Comprehensive F1 analysis for 2023</h1>
+      <div className='flex'>
+        <h1 className='mx-10 my-4 p-3 flex-2 bg-[#67e8f9] rounded'>Choose your driver</h1>
+        <div className='flex-1'>
+          <select className='mx-10 my-4 p-3' value={driver} onChange={changeDriver}>
+            <option value=" "></option>
+            <option value="Max Verstappen">Max Verstappen</option>
+            <option value="Sergio Perez">Sergio</option>
+            <option value="Charles Leclerc">Charles Leclerc</option>
+            <option value="Carlos Sainz">Carlos Sainz</option>
+            <option value="George Russell">George Russell</option>
+            <option value="Lewis Hamilton">Lewis Hamilton</option>
+            <option value="Esteban Ocon">Esteban Ocon</option>
+            <option value="Pierre Gasly">Pierre Gasly</option>
+            <option value="Lando Norris">Lando Norris</option>
+            <option value="Oscar Piastri">Oscar Piastri</option>
+            <option value="Nico Hulkenberg">Nico Hulkenberg</option>
+            <option value="Kevin Magnussen">Kevin Magnussen</option>
+            <option value="Yuki Tsunoda">Yuki Tsunoda</option>
+            <option value="Daniel Riciardo">Daniel Riciardo</option>
+            <option value="Valterri Bottas">Valterri Bottas</option>
+            <option value="Zhou Guanyu">Zhou Guanyu</option>
+            <option value="Fernando Alonso">Fernando Alonso</option>
+            <option value="Lance Stroll">Lance Stroll</option>
+            <option value="Logan Sergeant">Logan Sergeant</option>
+            <option value="Alex Albon">Alex Albon</option>
+          </select>
+        </div>
+      </div>
+      <div className='h-50 w-50 m-20'>
+        <Line data={chartData} options={chartOptions}/>
       </div>
     </div>
   )
