@@ -1,5 +1,5 @@
 "use client";
-import { driverData } from './data'
+// import { driverData } from './data'
 // import { BarChart } from './components/BarChart'
 import Chart from 'chart.js/auto';
 import { useState } from 'react'
