@@ -34,7 +34,7 @@ const allDriverData = {
 const chartOptions = {
   scales: {
     y: {
-      max: 27,
+      max: 450,
       beginAtZero: true,
     },
   },
@@ -59,12 +59,22 @@ export default function Home() {
     const selectedDriver = e.target.value
     setDriver(selectedDriver)
     console.log(driver)
+    let cPoints = []
+    let points = allDriverData[selectedDriver]
+
+    cPoints.push(points[0])
+    for (let index = 1; index < points.length; index++) {
+      cPoints.push(cPoints[index - 1] + points[index])
+    }
+
+    console.log(cPoints)
+
     setChartData({
       labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
       datasets: [
         {
           label:selectedDriver,
-          data:allDriverData[selectedDriver]
+          data:cPoints
         }
       ]
     })
@@ -104,6 +114,7 @@ export default function Home() {
       <div className='h-1/2 w-1/2 m-20 p-10'>
         <Line data={chartData} options={chartOptions}/>
       </div>
+
     </div>
   )
 }
