@@ -101,7 +101,7 @@ export default function Home() {
           </select>
         </div>
       </div>
-      <div className='h-50 w-50 m-20'>
+      <div className='h-1/2 w-1/2 m-20 p-10'>
         <Line data={chartData} options={chartOptions}/>
       </div>
     </div>
