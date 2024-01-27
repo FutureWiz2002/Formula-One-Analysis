@@ -1,6 +1,6 @@
 // "use client";
 
-advancedDriverData = {
+export const advancedDriverData = {
   "Charles Leclerc": {
     race_wins: 3,
     podium: 11,
@@ -222,3 +222,5 @@ advancedDriverData = {
     race_finishes: [2],
   },
 };
+
+export const teamdata = {}
