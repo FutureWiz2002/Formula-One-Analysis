@@ -6,7 +6,6 @@ import { useState } from 'react'
 import { Line } from 'react-chartjs-2';
 
 const allDriverData = {
-  // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
     'Max Verstappen':[0, 25, 0, 26, 26, 25, 15, 25, 25, 6, 19, 25, 25, 26, 26, 25, 6, 25, 25, 25, 8, 25],
     'Sergio Perez':[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
     'Charles Leclerc': [26, 19, 26, 8, 18, 0, 12, 0, 10, 12, 25, 0, 8, 8, 15, 18, 18, 15, 15, 8, 12, 18],
@@ -30,6 +29,48 @@ const allDriverData = {
     '':[]
 
   }
+
+const driver_data_advanced = {
+  'Max Verstappen': {
+    points:[0, 25, 0, 26, 26, 25, 15, 25, 25, 6, 19, 25, 25, 26, 26, 25, 6, 25, 25, 25, 8, 25],
+    racewins: 15,
+
+  },
+  'Sergio Perez':[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
+  'Charles Leclerc': {
+    race_wins:  3,
+    podiums:  11,
+    total_points: 291,
+    fastest_lap: 3,
+    average_points: 13.227272727272727,
+    race_finishes:  [26, 19, 26, 8, 18, 0, 12, 0, 10, 12, 25, 0, 8, 8, 15, 18, 18, 15, 15, 8, 12, 18]
+  },
+  'Carlos Sainz': {
+    race_wins:  1,
+    podiums:  9,
+    total_points:  228,
+    fastest_lap:  2,
+    average_points:  10.363636363636363,
+    race_finishes:  [18, 15, 0, 0, 15, 12, 18, 0, 19, 25, 0, 11, 12, 15, 4, 12, 15, 0, 0, 10, 15, 12]
+  },
+  'George Russell': [12, 10, 15, 12, 10, 15, 10, 15, 12, 0, 12, 15, 15, 12, 18, 15, 0, 4, 11, 13, 26, 10],
+  'Lewis Hamilton': [15, 1, 12, 0, 8, 10, 4, 12, 15, 16, 15, 18, 19, 0, 12, 10, 2, 10, 18, 18, 18, 0],
+  'Esteban Ocon': [6, 8, 6, 0, 4, 6, 0, 1, 8, 0, 10, 4, 2, 6, 2, 0, 0, 12, 0, 4, 4, 6],
+  'Pierre Gasly': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
+  'Lando Norris': [0, 6, 10, 15, 0, 4, 9, 2, 0, 8, 6, 6, 6, 0, 6, 6, 12, 1, 8, 2, 0, 9],
+  'Oscar Piastri': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
+  'Nico Hulkenburg': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
+  'Kevin Magnussen':  [10, 2, 0, 2, 0, 0, 0, 0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0],
+  'Yuki Tsunoda': [4, 0, 0, 6, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+  'Daniel Riciardo': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
+  'Valterri Bottas': [8, 0, 4, 10, 6, 8, 2, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0],
+  'Zhou Guanyu': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
+  'Fernando Alonso': [2, 0, 0, 0, 0, 2, 6, 6, 2, 10, 1, 8, 4, 10, 8, 0, 0, 6, 6, 0, 10, 0],
+  'Lance Stroll': [0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 8, 0, 0, 0, 1, 4],
+  'Logan Sergeant': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
+  'Alex Albon': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
+  '':[]
+}
 
 const chartOptions = {
   scales: {
@@ -74,7 +115,9 @@ export default function Home() {
       datasets: [
         {
           label:selectedDriver,
-          data:cPoints
+          data:cPoints,
+          fill: true,
+          backgroundColor: '#A7D5F9'
         }
       ]
     })
@@ -82,6 +125,13 @@ export default function Home() {
 
   return (
     <div className='font-sans bg-[#cbd5e1]'>
+      <nav class="justify-center">
+            <ol class="rounded-full p-5 text-xl justify-center">
+                <li class="Compare"><a href="#education">Drivers</a></li>
+                <li class="projects"><a href="#project">Team Performance</a></li>
+                <li class="contact">Compare Drivers</li>
+            </ol>
+      </nav>
       <h1 className='text-4xl p-5 text-center bg-[#cffafe]'>A Comprehensive F1 analysis for 2023</h1>
       <div className='flex'>
         <h1 className='mx-10 my-4 p-3 flex-2 bg-[#67e8f9] rounded'>Choose your driver</h1>
