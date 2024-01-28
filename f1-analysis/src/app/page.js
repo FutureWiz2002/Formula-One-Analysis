@@ -96,6 +96,7 @@ export default function Home() {
   
   // This section is for the teams
   const [team, setTeam] = useState("");
+  const [teamData, setTeamData] = useState();
 
   const changeTeam = (e) => {
     const newTeam = e.target.value;
@@ -105,13 +106,13 @@ export default function Home() {
 
   return (
     <div className='font-sans bg-[#1D1D11]'>
-      <nav class="justify-center">
+      {/* <nav class="justify-center">
             <ol class="rounded-full p-5 text-xl justify-center">
                 <li class="Compare"><a href="#education">Drivers</a></li>
                 <li class="projects"><a href="#project">Team Performance</a></li>
                 <li class="contact">Compare Drivers</li>
             </ol>
-      </nav>
+      </nav> */}
       <h1 className='text-4xl p-5 text-center bg-[#2272FF] text-white'>A Comprehensive F1 analysis for 2023</h1>
       <div className='flex'>
         <h1 className='mx-10 my-4 p-3 flex-2 bg-[#2272FF] rounded-full text-white'>Choose your driver</h1>

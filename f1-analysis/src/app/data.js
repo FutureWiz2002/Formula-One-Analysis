@@ -223,17 +223,15 @@ export const advancedDriverData = {
   },
 };
 
-// export const teamdata = {
-//   "Red Bull": ["Max Verstappen", "Sergio Perez"],
-//   "Mercedes": ["Lewis Hamilton", "George Russell"]
-//   "Ferrari": ["Carlos Sainz", "Charles Leclerc"]
-//   "McLaren": ["Lando Norris", "Oscar Piastri"]
-//   "Alpine": [""]
-//   Haas
-  
-//   eo
-//   AlphaTauri
-  
-//   tin
-//   Williams
-// }
+export const teamDriverInfo = {
+  "Red Bull": ["Max Verstappen", "Sergio Perez"],
+  "Mercedes": ["Lewis Hamilton", "George Russell"],
+  "Ferrari": ["Carlos Sainz", "Charles Leclerc"],
+  "McLaren": ["Lando Norris", "Oscar Piastri"],
+  "Alpine": ["Pierre Gasly", "Esteban Ocon"],
+  "Haas": ["Nico Hulkerberg", "Kevin Magnussen"],
+  "Alfa Romeo": ["Valterri Bottas", "Zhou Guanyu"],
+  "AlphaTauri": ["Yuki Tsunoda", "Daniel Ricciardo"],
+  "Aston Martin": ["Fernando Alonso", "Lance Stroll"],
+  "Williams": ["Alex Albon", "Logan Sergeant"]
+}
