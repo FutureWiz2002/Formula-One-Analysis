@@ -104,7 +104,7 @@ export default function Home() {
   }
 
   return (
-    <div className='font-sans bg-[#cbd5e1]'>
+    <div className='font-sans bg-[#1D1D11]'>
       <nav class="justify-center">
             <ol class="rounded-full p-5 text-xl justify-center">
                 <li class="Compare"><a href="#education">Drivers</a></li>
@@ -112,11 +112,11 @@ export default function Home() {
                 <li class="contact">Compare Drivers</li>
             </ol>
       </nav>
-      <h1 className='text-4xl p-5 text-center bg-[#cffafe]'>A Comprehensive F1 analysis for 2023</h1>
+      <h1 className='text-4xl p-5 text-center bg-[#2272FF] text-white'>A Comprehensive F1 analysis for 2023</h1>
       <div className='flex'>
-        <h1 className='mx-10 my-4 p-3 flex-2 bg-[#67e8f9] rounded'>Choose your driver</h1>
+        <h1 className='mx-10 my-4 p-3 flex-2 bg-[#2272FF] rounded-full text-white'>Choose your driver</h1>
         <div className='flex-1'>
-          <select className='mx-10 my-4 p-3' value={driver} onChange={changeDriver}>
+          <select className='mx-10 my-4 p-3 bg-[#2272FF]' value={driver} onChange={changeDriver}>
             <option value=" "></option>
             <option value="Max Verstappen">Max Verstappen</option>
             <option value="Sergio Perez">Sergio</option>
@@ -147,7 +147,7 @@ export default function Home() {
         <div className='flex-1 mx-20 p-10 flex-1'>
           <Line data={chartData} options={chartOptions}/>
         </div>
-        <div className='flex-1 text-3xl py-10 my-5 font-medium bg-[#0071FF] '>
+        <div className='flex-1 text-3xl p-10 m-5 font-medium bg-[#0071FF] '>
             <p className='py-3 text-white'>Driver: {driver}</p>
             <p className='py-3 text-white'>Race Wins: {driverinfo[1]}</p>
             <p className='py-3 text-white'>Podium: {driverinfo[2]}</p>
