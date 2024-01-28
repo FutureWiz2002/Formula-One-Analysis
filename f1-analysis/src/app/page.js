@@ -55,7 +55,6 @@ export default function Home() {
     ]
   })
 
-  const [team, setTeam] = useState("");
   
   const changeDriver = (e) => {
     const selectedDriver = e.target.value
@@ -63,25 +62,25 @@ export default function Home() {
     console.log(driver)
     let cPoints = []
     let points = advancedDriverData[selectedDriver].race_finishes
-
+    
     setDriverinfo([
       selectedDriver, 
       advancedDriverData[selectedDriver].race_wins, 
       advancedDriverData[selectedDriver].podium, 
       advancedDriverData[selectedDriver].fastest_lap, 
       advancedDriverData[selectedDriver].average, 
-
-
+      
+      
     ])
-
+    
     cPoints.push(points[0])
     for (let index = 1; index < points.length; index++) {
       cPoints.push(cPoints[index - 1] + points[index])
     }
-
+    
     console.log(cPoints)
     console.log(driverinfo)
-
+    
     setChartData({
       labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
       datasets: [
@@ -94,6 +93,9 @@ export default function Home() {
       ]
     })
   }
+  
+  // This section is for the teams
+  const [team, setTeam] = useState("");
 
   const changeTeam = (e) => {
     const newTeam = e.target.value;
@@ -145,12 +147,12 @@ export default function Home() {
         <div className='flex-1 mx-20 p-10 flex-1'>
           <Line data={chartData} options={chartOptions}/>
         </div>
-        <div className='flex-1 text-3xl py-10 my-5 font-medium'>
-            <p className='py-3'>Driver: {driver}</p>
-            <p className='py-3'>Race Wins: {driverinfo[1]}</p>
-            <p className='py-3'>Podium: {driverinfo[2]}</p>
-            <p className='py-3'>Fastest Lap: {driverinfo[3]}</p>
-            <p className='py-3'>Average: {driverinfo[4]}</p>
+        <div className='flex-1 text-3xl py-10 my-5 font-medium bg-[#0071FF] '>
+            <p className='py-3 text-white'>Driver: {driver}</p>
+            <p className='py-3 text-white'>Race Wins: {driverinfo[1]}</p>
+            <p className='py-3 text-white'>Podium: {driverinfo[2]}</p>
+            <p className='py-3 text-white'>Fastest Lap: {driverinfo[3]}</p>
+            <p className='py-3 text-white'>Average: {driverinfo[4]}</p>
         </div>
       </div>
 
