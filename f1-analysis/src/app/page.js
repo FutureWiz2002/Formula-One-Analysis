@@ -103,6 +103,63 @@ export default function Home() {
     setTeam(newTeam)
     console.log(newTeam)
   }
+  const [driver1, setDriver1] = useState("Max Verstappen");
+  const [driver2, setDriver2] = useState("Charles Leclerc")
+  const [comapareDriver, setCompareDriver] = useState({
+    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
+    datasets: [
+      {
+        label: driver1,
+        data: advancedDriverData[driver]
+      },
+      {
+        label: driver2,
+        data: advancedDriverData[driver]
+      }
+
+    ]
+  })
+
+  const updateDriver1 = (e) => {
+    let current = e.target.value
+    console.log(current)
+    setDriver1(current)
+    setCompareDriver({
+      labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
+      datasets: [
+        {
+          label: driver1,
+          data: advancedDriverData[driver1]
+        },
+        {
+          label: driver2,
+          data: advancedDriverData[driver2]
+        }
+  
+      ]
+    })
+    
+  }
+
+  const updateDriver2 = (e) => {
+    let current = e.target.value
+    console.log(current)
+    setDriver2(current)
+    setCompareDriver({
+      labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
+      datasets: [
+        {
+          label: driver1,
+          data: advancedDriverData[driver1]
+        },
+        {
+          label: driver2,
+          data: advancedDriverData[driver2]
+        }
+  
+      ]
+    })
+  }
 
   return (
     <div className='font-sans bg-[#1D1D11]'>
@@ -112,7 +169,7 @@ export default function Home() {
                 <li class="projects"><a href="#project">Team Performance</a></li>
                 <li class="contact">Compare Drivers</li>
             </ol>
-      </nav> */}
+      </nav> */}  
       <h1 className='text-4xl p-5 text-center bg-[#2272FF] text-white'>A Comprehensive F1 analysis for 2023</h1>
       <div className='flex'>
         <h1 className='mx-10 my-4 p-3 flex-2 bg-[#2272FF] rounded-full text-white'>Choose your driver</h1>
@@ -177,6 +234,64 @@ export default function Home() {
           <Line data={chartData} options={chartOptions}/>
       </div>
 
+      {/* Comparing Drivers */}
+      <div>
+        <div className='flex'>
+          <select className='mx-10 my-4 p-3 bg-[#2272FF] flex-1' value={driver1} onChange={updateDriver1}>
+            <option value=" "></option>
+            <option value="Max Verstappen">Max Verstappen</option>
+            <option value="Sergio Perez">Sergio</option>
+            <option value="Charles Leclerc">Charles Leclerc</option>
+            <option value="Carlos Sainz">Carlos Sainz</option>
+            <option value="George Russell">George Russell</option>
+            <option value="Lewis Hamilton">Lewis Hamilton</option>
+            <option value="Esteban Ocon">Esteban Ocon</option>
+            <option value="Pierre Gasly">Pierre Gasly</option>
+            <option value="Lando Norris">Lando Norris</option>
+            <option value="Oscar Piastri">Oscar Piastri</option>
+            <option value="Nico Hulkenberg">Nico Hulkenberg</option>
+            <option value="Kevin Magnussen">Kevin Magnussen</option>
+            <option value="Yuki Tsunoda">Yuki Tsunoda</option>
+            <option value="Daniel Riciardo">Daniel Riciardo</option>
+            <option value="Valterri Bottas">Valterri Bottas</option>
+            <option value="Zhou Guanyu">Zhou Guanyu</option>
+            <option value="Fernando Alonso">Fernando Alonso</option>
+            <option value="Lance Stroll">Lance Stroll</option>
+            <option value="Logan Sergeant">Logan Sergeant</option>
+            <option value="Alex Albon">Alex Albon</option>
+          </select>
+          <select className='mx-10 my-4 p-3 bg-[#2272FF] flex-1' value={driver2} onChange={updateDriver2}>
+            <option value=" "></option>
+            <option value="Max Verstappen">Max Verstappen</option>
+            <option value="Sergio Perez">Sergio</option>
+            <option value="Charles Leclerc">Charles Leclerc</option>
+            <option value="Carlos Sainz">Carlos Sainz</option>
+            <option value="George Russell">George Russell</option>
+            <option value="Lewis Hamilton">Lewis Hamilton</option>
+            <option value="Esteban Ocon">Esteban Ocon</option>
+            <option value="Pierre Gasly">Pierre Gasly</option>
+            <option value="Lando Norris">Lando Norris</option>
+            <option value="Oscar Piastri">Oscar Piastri</option>
+            <option value="Nico Hulkenberg">Nico Hulkenberg</option>
+            <option value="Kevin Magnussen">Kevin Magnussen</option>
+            <option value="Yuki Tsunoda">Yuki Tsunoda</option>
+            <option value="Daniel Riciardo">Daniel Riciardo</option>
+            <option value="Valterri Bottas">Valterri Bottas</option>
+            <option value="Zhou Guanyu">Zhou Guanyu</option>
+            <option value="Fernando Alonso">Fernando Alonso</option>
+            <option value="Lance Stroll">Lance Stroll</option>
+            <option value="Logan Sergeant">Logan Sergeant</option>
+            <option value="Alex Albon">Alex Albon</option>
+          </select>
+        </div>
+
+        
+        {/* graph */}
+
+        <div>
+          <Line data={comapareDriver}/>
+        </div>
+      </div>
 
     </div>
   )
