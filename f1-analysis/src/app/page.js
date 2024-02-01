@@ -124,16 +124,34 @@ export default function Home() {
     let current = e.target.value
     console.log(current)
     setDriver1(current)
+
+    let cPoints1 = []
+    let points1 = advancedDriverData[current].race_finishes
+
+    cPoints1.push(points1[0])
+    for (let index = 1; index < points1.length; index++) {
+      cPoints1.push(cPoints1[index - 1] + points1[index])
+    }
+    
+    let cPoints2 = []
+    let points2 = advancedDriverData[driver2].race_finishes
+
+    cPoints2.push(points2[0])
+    for (let index = 1; index < points2.length; index++) {
+      cPoints2.push(cPoints2[index - 1] + points2[index])
+    }
+
+
     setCompareDriver({
       labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
       datasets: [
         {
           label: driver1,
-          data: advancedDriverData[driver1]
+          data: cPoints1
         },
         {
           label: driver2,
-          data: advancedDriverData[driver2]
+          data: cPoints2
         }
   
       ]
@@ -145,16 +163,34 @@ export default function Home() {
     let current = e.target.value
     console.log(current)
     setDriver2(current)
+
+    let cPoints1 = []
+    let points1 = advancedDriverData[driver1].race_finishes
+
+    cPoints1.push(points1[0])
+    for (let index = 1; index < points1.length; index++) {
+      cPoints1.push(cPoints1[index - 1] + points1[index])
+    }
+    
+    let cPoints2 = []
+    let points2 = advancedDriverData[current].race_finishes
+
+    cPoints2.push(points2[0])
+    for (let index = 1; index < points2.length; index++) {
+      cPoints2.push(cPoints2[index - 1] + points2[index])
+    }
+
+
     setCompareDriver({
       labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
       datasets: [
         {
           label: driver1,
-          data: advancedDriverData[driver1]
+          data: cPoints1
         },
         {
           label: driver2,
-          data: advancedDriverData[driver2]
+          data: cPoints2
         }
   
       ]
@@ -286,7 +322,7 @@ export default function Home() {
         </div>
 
         
-        {/* graph */}
+        {/* graph for comparing drivers */}
 
         <div>
           <Line data={comapareDriver}/>
