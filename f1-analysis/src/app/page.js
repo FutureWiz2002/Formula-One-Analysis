@@ -110,11 +110,11 @@ export default function Home() {
     datasets: [
       {
         label: driver1,
-        data: advancedDriverData[driver]
+        data: advancedDriverData[driver1].race_finishes
       },
       {
         label: driver2,
-        data: advancedDriverData[driver]
+        data: advancedDriverData[driver2].race_finishes
       }
 
     ]
@@ -124,9 +124,12 @@ export default function Home() {
     let current = e.target.value
     console.log(current)
     setDriver1(current)
+    console.log(`driver1 is ${driver1}`)
+    console.log(`driver2 is ${driver2}`)
+
 
     let cPoints1 = []
-    let points1 = advancedDriverData[current].race_finishes
+    let points1 = advancedDriverData[driver1].race_finishes
 
     cPoints1.push(points1[0])
     for (let index = 1; index < points1.length; index++) {
@@ -164,6 +167,9 @@ export default function Home() {
     console.log(current)
     setDriver2(current)
 
+    console.log(`driver1 is ${driver1}`)
+    console.log(`driver2 is ${driver2}`)
+
     let cPoints1 = []
     let points1 = advancedDriverData[driver1].race_finishes
 
@@ -173,7 +179,7 @@ export default function Home() {
     }
     
     let cPoints2 = []
-    let points2 = advancedDriverData[current].race_finishes
+    let points2 = advancedDriverData[driver2].race_finishes
 
     cPoints2.push(points2[0])
     for (let index = 1; index < points2.length; index++) {
