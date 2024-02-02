@@ -104,7 +104,7 @@ export default function Home() {
     console.log(newTeam)
   }
   const [driver1, setDriver1] = useState("Max Verstappen");
-  const [driver2, setDriver2] = useState("Charles Leclerc")
+  const [driver2, setDriver2] = useState("Sergio Perez");
   const [comapareDriver, setCompareDriver] = useState({
     labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
     datasets: [
@@ -121,8 +121,9 @@ export default function Home() {
   })
 
   const updateDriver1 = (e) => {
-    let current = e.target.value
+    const current = e.target.value
     console.log(current)
+    setDriver2(driver2)
     setDriver1(current)
     console.log(`driver1 is ${driver1}`)
     console.log(`driver2 is ${driver2}`)
@@ -150,11 +151,13 @@ export default function Home() {
       datasets: [
         {
           label: driver1,
-          data: cPoints1
+          data: cPoints1,
+          borderColor: '#36A2EB'
         },
         {
           label: driver2,
-          data: cPoints2
+          data: cPoints2,
+          borderColor: '#36A2EB'
         }
   
       ]
@@ -163,8 +166,9 @@ export default function Home() {
   }
 
   const updateDriver2 = (e) => {
-    let current = e.target.value
+    const current = e.target.value
     console.log(current)
+    setDriver1(driver1)
     setDriver2(current)
 
     console.log(`driver1 is ${driver1}`)
@@ -192,11 +196,13 @@ export default function Home() {
       datasets: [
         {
           label: driver1,
-          data: cPoints1
+          data: cPoints1,
+          borderColor: '#36A2EB'
         },
         {
           label: driver2,
-          data: cPoints2
+          data: cPoints2,
+          borderColor: '#ffffff'
         }
   
       ]

@@ -221,6 +221,15 @@ export const advancedDriverData = {
     average: 2.0,
     race_finishes: [2],
   },
+  "": {
+    race_wins: 0,
+    podium: 0,
+    points: 0,
+    fastest_lap: 0,
+    average: 0.0,
+    race_finishes: [],
+  },
+
 };
 
 export const teamDriverInfo = {
