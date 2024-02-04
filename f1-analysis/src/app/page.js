@@ -103,18 +103,18 @@ export default function Home() {
     setTeam(newTeam)
     console.log(newTeam)
   }
-  const [driver1, setDriver1] = useState("Max Verstappen");
-  const [driver2, setDriver2] = useState("Sergio Perez");
+  const [driver1, setDriver1] = useState("");
+  const [driver2, setDriver2] = useState("");
   const [comapareDriver, setCompareDriver] = useState({
     labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
     datasets: [
       {
         label: driver1,
-        data: advancedDriverData[driver1].race_finishes
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0],
       },
       {
         label: driver2,
-        data: advancedDriverData[driver2].race_finishes
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0],
       }
 
     ]
@@ -123,7 +123,11 @@ export default function Home() {
   const updateDriver1 = (e) => {
     const current = e.target.value
     console.log(current)
-    setDriver2(driver2)
+    if (driver2 === "" || driver2 == " ") {
+      setDriver2("Max Verstappen")
+    } {
+      setDriver2(driver2)
+    }
     setDriver1(current)
     console.log(`driver1 is ${driver1}`)
     console.log(`driver2 is ${driver2}`)
@@ -147,7 +151,7 @@ export default function Home() {
 
 
     setCompareDriver({
-      labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
+      labels: ["BRN","SAU","AUS","AZB","MIA","MON","ESP","CAN","AUT","GBR","HUN","BEL","NED","ITA2","SIN","JPN","QAT","USA","MEX","BRA","LAS","UAE"],
       datasets: [
         {
           label: driver1,
@@ -168,7 +172,11 @@ export default function Home() {
   const updateDriver2 = (e) => {
     const current = e.target.value
     console.log(current)
-    setDriver1(driver1)
+    if (driver1 === "" || driver1 == " ") {
+      setDriver1("Max Verstappen")
+    } else {
+      setDriver1(driver1)
+    }
     setDriver2(current)
 
     console.log(`driver1 is ${driver1}`)
@@ -286,7 +294,7 @@ export default function Home() {
       <div>
         <div className='flex'>
           <select className='mx-10 my-4 p-3 bg-[#2272FF] flex-1' value={driver1} onChange={updateDriver1}>
-            <option value=" "></option>
+            <option value=""></option>
             <option value="Max Verstappen">Max Verstappen</option>
             <option value="Sergio Perez">Sergio</option>
             <option value="Charles Leclerc">Charles Leclerc</option>
@@ -309,7 +317,7 @@ export default function Home() {
             <option value="Alex Albon">Alex Albon</option>
           </select>
           <select className='mx-10 my-4 p-3 bg-[#2272FF] flex-1' value={driver2} onChange={updateDriver2}>
-            <option value=" "></option>
+            <option value=""></option>
             <option value="Max Verstappen">Max Verstappen</option>
             <option value="Sergio Perez">Sergio</option>
             <option value="Charles Leclerc">Charles Leclerc</option>

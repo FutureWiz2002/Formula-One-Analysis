@@ -30,8 +30,8 @@ export const advancedDriverData = {
     fastest_lap: 2,
     average: 10.590909090909092,
     race_finishes: [
-      15, 1, 12, 0, 8, 10, 4, 12, 15, 16, 15, 18, 19, 0, 12, 10, 2, 10, 18, 18,
-      18, 0,
+      10, 10, 18, 10, 8, 13, 18, 15, 4, 15, 12, 15, 8, 8, 16, 10, 4, 7, 19, 6,
+      6, 2,
     ],
   },
   "George Russell": {
@@ -92,7 +92,8 @@ export const advancedDriverData = {
     fastest_lap: 0,
     average: 3.6818181818181817,
     race_finishes: [
-      2, 0, 0, 0, 0, 2, 6, 6, 2, 10, 1, 8, 4, 10, 8, 0, 0, 6, 6, 0, 10, 0,
+      15, 15, 15, 15, 15, 18, 6, 18, 14, 6, 2, 10, 19, 2, 0, 4, 9, 0, 0, 15, 2,
+      6,
     ],
   },
   "Guanyu Zhou": {
@@ -180,8 +181,8 @@ export const advancedDriverData = {
     fastest_lap: 3,
     average: 13.227272727272727,
     race_finishes: [
-      0, 12, 18, 18, 12, 19, 25, 19, 0, 18, 0, 12, 10, 18, 10, 9, 25, 18, 12,
-      15, 6, 15,
+      18, 25, 11, 33, 18, 0, 12, 9, 22, 8, 15, 18, 12, 18, 4, 0, 1, 16, 0, 18,
+      15, 12,
     ],
   },
   "Max Verstappen": {
@@ -191,8 +192,8 @@ export const advancedDriverData = {
     fastest_lap: 5,
     average: 19.681818181818183,
     race_finishes: [
-      0, 25, 0, 26, 26, 25, 15, 25, 25, 6, 19, 25, 25, 26, 26, 25, 6, 25, 25,
-      25, 8, 25,
+      25, 19, 25, 24, 26, 25, 26, 25, 34, 26, 26, 33, 25, 25, 10, 26, 33, 33,
+      25, 33, 25, 26,
     ],
   },
   "Pierre Gasly": {
@@ -227,20 +228,19 @@ export const advancedDriverData = {
     points: 0,
     fastest_lap: 0,
     average: 0.0,
-    race_finishes: [],
+    race_finishes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
-
 };
 
 export const teamDriverInfo = {
   "Red Bull": ["Max Verstappen", "Sergio Perez"],
-  "Mercedes": ["Lewis Hamilton", "George Russell"],
-  "Ferrari": ["Carlos Sainz", "Charles Leclerc"],
-  "McLaren": ["Lando Norris", "Oscar Piastri"],
-  "Alpine": ["Pierre Gasly", "Esteban Ocon"],
-  "Haas": ["Nico Hulkerberg", "Kevin Magnussen"],
+  Mercedes: ["Lewis Hamilton", "George Russell"],
+  Ferrari: ["Carlos Sainz", "Charles Leclerc"],
+  McLaren: ["Lando Norris", "Oscar Piastri"],
+  Alpine: ["Pierre Gasly", "Esteban Ocon"],
+  Haas: ["Nico Hulkerberg", "Kevin Magnussen"],
   "Alfa Romeo": ["Valterri Bottas", "Zhou Guanyu"],
-  "AlphaTauri": ["Yuki Tsunoda", "Daniel Ricciardo"],
+  AlphaTauri: ["Yuki Tsunoda", "Daniel Ricciardo"],
   "Aston Martin": ["Fernando Alonso", "Lance Stroll"],
-  "Williams": ["Alex Albon", "Logan Sergeant"]
-}
+  Williams: ["Alex Albon", "Logan Sergeant"],
+};
