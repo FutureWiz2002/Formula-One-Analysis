@@ -16,10 +16,38 @@ all_data = {}
 
 for i in driverlist:
     driverdata = driverProfile(i)
-    all_data[i] = driverdata
+    race_finishes = 0
+    race_wins = 0
+    podiums = 0
+    total_points = 0
+    average = 0
+    
 
-for i, j in all_data.items():
-    print(i, j)
-    print("\n")
+    for points in driverdata:
+        
+        try:
+            total_points += points
+            if int(points) >= 25:
+                race_wins += 1
+            if int(points) >= 18:
+                podiums += 1
+            race_finishes += 1
+            
+        except:
+            print("Nan Detected") 
+    average = points / race_finishes
+        
+
+
+
+    for i in driverdata:
+        all_data[i] = []
+        all_data[i].append(race_wins)
+        all_data[i].append(podiums)
+        all_data[i].append(total_points)
+        all_data[i].append(race_finishes)
+        all_data[i].append(average)
+        all_data[i].append(driverdata)
+
 
 print(json.dumps(all_data))
