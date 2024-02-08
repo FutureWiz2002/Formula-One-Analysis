@@ -14,8 +14,8 @@ def driverProfile(driverName):
 
 all_data = {}
 
-for i in driverlist:
-    driverdata = driverProfile(i)
+for driver in driverlist:
+    driverdata = driverProfile(driver)
     race_finishes = 0
     race_wins = 0
     podiums = 0
@@ -36,18 +36,14 @@ for i in driverlist:
         except:
             print("Nan Detected") 
     average = points / race_finishes
-        
 
-
-
-    for i in driverdata:
-        all_data[i] = []
-        all_data[i].append(race_wins)
-        all_data[i].append(podiums)
-        all_data[i].append(total_points)
-        all_data[i].append(race_finishes)
-        all_data[i].append(average)
-        all_data[i].append(driverdata)
+    all_data[driver] = []
+    all_data[driver].append(race_wins)
+    all_data[driver].append(podiums)
+    all_data[driver].append(total_points)
+    all_data[driver].append(race_finishes)
+    all_data[driver].append(average)
+    all_data[driver].append(driverdata)
 
 
 print(json.dumps(all_data))
