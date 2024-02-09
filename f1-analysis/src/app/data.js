@@ -550,3 +550,212 @@ export const versionTwo = {
     ],
   ],
 };
+
+export const versionThree = {
+  "Max Verstappen": {
+    race_wins: 19,
+    podiums: 21,
+    total_points: 575.0,
+    average: 26.136363636363637,
+    race_finishes: [
+      25, 19, 25, 24, 26, 25, 26, 25, 34, 26, 26, 33, 25, 25, 10, 26, 33, 33,
+      25, 33, 25, 26,
+    ],
+  },
+  "Sergio Perez": {
+    race_wins: 2,
+    podiums: 8,
+    total_points: 285.0,
+    average: 12.954545454545455,
+    race_finishes: [
+      18, 25, 11, 33, 18, 0, 12, 9, 22, 8, 15, 18, 12, 18, 4, 0, 1, 16, 0, 18,
+      15, 12,
+    ],
+  },
+  "Lewis Hamilton": {
+    race_wins: 0,
+    podiums: 3,
+    total_points: 234.0,
+    average: 10.636363636363637,
+    race_finishes: [
+      10, 10, 18, 10, 8, 13, 18, 15, 4, 15, 12, 15, 8, 8, 16, 10, 4, 7, 19, 6,
+      6, 2,
+    ],
+  },
+  "Fernando Alonso": {
+    race_wins: 0,
+    podiums: 3,
+    total_points: 206.0,
+    average: 9.363636363636363,
+    race_finishes: [
+      15, 15, 15, 15, 15, 18, 6, 18, 14, 6, 2, 10, 19, 2, 0, 4, 9, 0, 0, 15, 2,
+      6,
+    ],
+  },
+  "Charles Leclerc": {
+    race_wins: 0,
+    podiums: 5,
+    total_points: 206.0,
+    average: 9.363636363636363,
+    race_finishes: [
+      0, 6, 0, 22, 6, 8, 0, 12, 18, 2, 6, 19, 0, 12, 12, 12, 10, 6, 15, 4, 18,
+      18,
+    ],
+  },
+  "Lando Norris": {
+    race_wins: 1,
+    podiums: 7,
+    total_points: 205.0,
+    average: 9.318181818181818,
+    race_finishes: [
+      0, 0, 8, 2, 0, 2, 0, 0, 12, 18, 18, 9, 6, 4, 18, 18, 21, 23, 10, 26, 0,
+      10,
+    ],
+  },
+  "Carlos Sainz": {
+    race_wins: 1,
+    podiums: 2,
+    total_points: 200.0,
+    average: 9.090909090909092,
+    race_finishes: [
+      12, 8, 0, 14, 10, 4, 10, 10, 14, 1, 4, 5, 10, 15, 25, 8, 3, 18, 12, 9, 8,
+      0,
+    ],
+  },
+  "George Russell": {
+    race_wins: 0,
+    podiums: 0,
+    total_points: 175.0,
+    average: 7.954545454545454,
+    race_finishes: [
+      6, 12, 0, 10, 12, 10, 15, 0, 7, 10, 8, 9, 0, 10, 0, 6, 17, 11, 8, 5, 4,
+      15,
+    ],
+  },
+  "Oscar Piastri": {
+    race_wins: 1,
+    podiums: 1,
+    total_points: 97.0,
+    average: 4.409090909090909,
+    race_finishes: [
+      0, 0, 4, 0, 0, 1, 0, 0, 0, 12, 10, 7, 2, 0, 6, 15, 26, 0, 4, 0, 2, 8,
+    ],
+  },
+  "Lance Stroll": {
+    race_wins: 0,
+    podiums: 0,
+    total_points: 74.0,
+    average: 3.3636363636363638,
+    race_finishes: [
+      8, 0, 12, 7, 0, 0, 8, 2, 7, 0, 1, 2, 0, 0, 0, 0, 0, 6, 0, 10, 10, 1,
+    ],
+  },
+  "Pierre Gasly": {
+    race_wins: 0,
+    podiums: 0,
+    total_points: 62.0,
+    average: 2.8181818181818183,
+    race_finishes: [
+      2, 2, 0, 0, 4, 6, 1, 0, 1, 0, 0, 6, 15, 0, 8, 1, 0, 10, 0, 6, 0, 0,
+    ],
+  },
+  "Esteban Ocon": {
+    race_wins: 0,
+    podiums: 0,
+    total_points: 58.0,
+    average: 2.6363636363636362,
+    race_finishes: [
+      0, 4, 0, 0, 2, 15, 4, 4, 2, 0, 0, 4, 1, 0, 0, 2, 6, 0, 1, 1, 12, 0,
+    ],
+  },
+  "Alex Albon": {
+    race_wins: 0,
+    podiums: 0,
+    total_points: 27.0,
+    average: 1.2272727272727273,
+    race_finishes: [
+      1, 0, 0, 0, 0, 0, 0, 6, 0, 4, 0, 0, 4, 6, 0, 0, 2, 2, 2, 0, 0, 0,
+    ],
+  },
+  "Yuki Tsunoda": {
+    race_wins: 0,
+    podiums: 0,
+    total_points: 17.0,
+    average: 0.7727272727272727,
+    race_finishes: [
+      0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 5, 0, 5, 0, 4,
+    ],
+  },
+  "Valterri Bottas": {
+    race_wins: 0,
+    podiums: 0,
+    total_points: 10.0,
+    average: 0.45454545454545453,
+    race_finishes: [
+      4, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 4, 0, 0, 0, 0, 0,
+    ],
+  },
+  "Nico Hulkenberg": {
+    race_wins: 0,
+    podiums: 0,
+    total_points: 9.0,
+    average: 0.4090909090909091,
+    race_finishes: [
+      0, 0, 6, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    ],
+  },
+  "Daniel Ricciardo": {
+    race_wins: 0,
+    podiums: 0,
+    total_points: NaN,
+    average: NaN,
+    race_finishes: [
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0,
+    ],
+  },
+  "Zhou Guanyu": {
+    race_wins: 0,
+    podiums: 0,
+    total_points: 6.0,
+    average: 0.2727272727272727,
+    race_finishes: [
+      0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0,
+    ],
+  },
+  "Kevin Magnussen": {
+    race_wins: 0,
+    podiums: 0,
+    total_points: 3.0,
+    average: 0.13636363636363635,
+    race_finishes: [
+      0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
+    ],
+  },
+  "Liam Lawson": {
+    race_wins: 0,
+    podiums: 0,
+    total_points: NaN,
+    average: NaN,
+    race_finishes: [
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0,
+    ],
+  },
+  "Logan Sargeant": {
+    race_wins: 0,
+    podiums: 0,
+    total_points: 1.0,
+    average: 0.045454545454545456,
+    race_finishes: [
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
+    ],
+  },
+  "Nick De Vries": {
+    race_wins: 0,
+    podiums: 0,
+    total_points: NaN,
+    average: NaN,
+    race_finishes: [
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    ],
+  },
+};

@@ -1,5 +1,6 @@
 import pandas as pd
 import json
+import re
 
 df = pd.read_csv("F1_2023.csv", encoding='latin-1')
 driverlist = df['Driver']
@@ -22,6 +23,7 @@ for driver in driverlist:
     total_points = 0
     average = 0
     
+    updated_points = []
 
     for points in driverdata:
         
@@ -32,18 +34,19 @@ for driver in driverlist:
             if int(points) >= 18:
                 podiums += 1
             race_finishes += 1
+            updated_points.append(int(points))
             
         except:
             print("Nan Detected") 
+            updated_points.append(0)
     average = total_points / race_finishes
 
-    all_data[driver] = []
-    all_data[driver].append(race_wins)
-    all_data[driver].append(podiums)
-    all_data[driver].append(total_points)
-    all_data[driver].append(race_finishes)
-    all_data[driver].append(average)
-    all_data[driver].append(driverdata)
+    all_data[driver] = {}
+    all_data[driver]["race_wins"] = int(race_wins)
+    all_data[driver]["podiums"] = int(podiums)
+    all_data[driver]["total_points"] = total_points
+    all_data[driver]["average"] = average
+    all_data[driver]["race_finishes"] = updated_points
 
 
 print(json.dumps(all_data))
