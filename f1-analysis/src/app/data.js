@@ -246,317 +246,13 @@ export const teamDriverInfo = {
 };
 
 // format: wins, podiums, points, race_finishes, average
-export const versionTwo = {
-  "Max Verstappen": [
-    19,
-    21,
-    575.0,
-    22,
-    26.136363636363637,
-    [
-      25.0, 19.0, 25.0, 24.0, 26.0, 25.0, 26.0, 25.0, 34.0, 26.0, 26.0, 33.0,
-      25.0, 25.0, 10.0, 26.0, 33.0, 33.0, 25.0, 33.0, 25.0, 26.0,
-    ],
-  ],
-  "Sergio Perez": [
-    2,
-    8,
-    285.0,
-    22,
-    12.954545454545455,
-    [
-      18.0, 25.0, 11.0, 33.0, 18.0, 0.0, 12.0, 9.0, 22.0, 8.0, 15.0, 18.0, 12.0,
-      18.0, 4.0, 0.0, 1.0, 16.0, 0.0, 18.0, 15.0, 12.0,
-    ],
-  ],
-  "Lewis Hamilton": [
-    0,
-    3,
-    234.0,
-    22,
-    10.636363636363637,
-    [
-      10.0, 10.0, 18.0, 10.0, 8.0, 13.0, 18.0, 15.0, 4.0, 15.0, 12.0, 15.0, 8.0,
-      8.0, 16.0, 10.0, 4.0, 7.0, 19.0, 6.0, 6.0, 2.0,
-    ],
-  ],
-  "Fernando Alonso": [
-    0,
-    3,
-    206.0,
-    22,
-    9.363636363636363,
-    [
-      15.0, 15.0, 15.0, 15.0, 15.0, 18.0, 6.0, 18.0, 14.0, 6.0, 2.0, 10.0, 19.0,
-      2.0, 0.0, 4.0, 9.0, 0.0, 0.0, 15.0, 2.0, 6.0,
-    ],
-  ],
-  "Charles Leclerc": [
-    0,
-    5,
-    206.0,
-    22,
-    9.363636363636363,
-    [
-      0.0, 6.0, 0.0, 22.0, 6.0, 8.0, 0.0, 12.0, 18.0, 2.0, 6.0, 19.0, 0.0, 12.0,
-      12.0, 12.0, 10.0, 6.0, 15.0, 4.0, 18.0, 18.0,
-    ],
-  ],
-  "Lando Norris": [
-    0,
-    7,
-    205.0,
-    22,
-    9.318181818181818,
-    [
-      0.0, 0.0, 8.0, 2.0, 0.0, 2.0, 0.0, 0.0, 12.0, 18.0, 18.0, 9.0, 6.0, 4.0,
-      18.0, 18.0, 21.0, 23.0, 10.0, 26.0, 0.0, 10.0,
-    ],
-  ],
-  "Carlos Sainz": [
-    1,
-    2,
-    200.0,
-    22,
-    9.090909090909092,
-    [
-      12.0, 8.0, 0.0, 14.0, 10.0, 4.0, 10.0, 10.0, 14.0, 1.0, 4.0, 5.0, 10.0,
-      15.0, 25.0, 8.0, 3.0, 18.0, 12.0, 9.0, 8.0, 0.0,
-    ],
-  ],
-  "George Russell": [
-    0,
-    0,
-    175.0,
-    22,
-    7.954545454545454,
-    [
-      6.0, 12.0, 0.0, 10.0, 12.0, 10.0, 15.0, 0.0, 7.0, 10.0, 8.0, 9.0, 0.0,
-      10.0, 0.0, 6.0, 17.0, 11.0, 8.0, 5.0, 4.0, 15.0,
-    ],
-  ],
-  "Oscar Piastri": [
-    0,
-    1,
-    97.0,
-    22,
-    4.409090909090909,
-    [
-      0.0, 0.0, 4.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 12.0, 10.0, 7.0, 2.0, 0.0,
-      6.0, 15.0, 26.0, 0.0, 4.0, 0.0, 2.0, 8.0,
-    ],
-  ],
-  "Lance Stroll": [
-    0,
-    0,
-    74.0,
-    22,
-    3.3636363636363638,
-    [
-      8.0, 0.0, 12.0, 7.0, 0.0, 0.0, 8.0, 2.0, 7.0, 0.0, 1.0, 2.0, 0.0, 0.0,
-      0.0, 0.0, 0.0, 6.0, 0.0, 10.0, 10.0, 1.0,
-    ],
-  ],
-  "Pierre Gasly": [
-    0,
-    0,
-    62.0,
-    22,
-    2.8181818181818183,
-    [
-      2.0, 2.0, 0.0, 0.0, 4.0, 6.0, 1.0, 0.0, 1.0, 0.0, 0.0, 6.0, 15.0, 0.0,
-      8.0, 1.0, 0.0, 10.0, 0.0, 6.0, 0.0, 0.0,
-    ],
-  ],
-  "Esteban Ocon": [
-    0,
-    0,
-    58.0,
-    22,
-    2.6363636363636362,
-    [
-      0.0, 4.0, 0.0, 0.0, 2.0, 15.0, 4.0, 4.0, 2.0, 0.0, 0.0, 4.0, 1.0, 0.0,
-      0.0, 2.0, 6.0, 0.0, 1.0, 1.0, 12.0, 0.0,
-    ],
-  ],
-  "Alex Albon": [
-    0,
-    0,
-    27.0,
-    22,
-    1.2272727272727273,
-    [
-      1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 6.0, 0.0, 4.0, 0.0, 0.0, 4.0, 6.0, 0.0,
-      0.0, 2.0, 2.0, 2.0, 0.0, 0.0, 0.0,
-    ],
-  ],
-  "Yuki Tsunoda": [
-    0,
-    0,
-    17.0,
-    22,
-    0.7727272727272727,
-    [
-      0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0,
-      0.0, 0.0, 5.0, 0.0, 5.0, 0.0, 4.0,
-    ],
-  ],
-  "Valterri Bottas": [
-    0,
-    0,
-    10.0,
-    22,
-    0.45454545454545453,
-    [
-      4.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0,
-      0.0, 4.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-    ],
-  ],
-  "Nico Hulkenberg": [
-    0,
-    0,
-    9.0,
-    22,
-    0.4090909090909091,
-    [
-      0.0, 0.0, 6.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-    ],
-  ],
-  "Daniel Ricciardo": [
-    0,
-    0,
-    NaN,
-    7,
-    NaN,
-    [
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      0.0,
-      0.0,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      0.0,
-      6.0,
-      0.0,
-      0.0,
-      0.0,
-    ],
-  ],
-  "Zhou Guanyu": [
-    0,
-    0,
-    6.0,
-    22,
-    0.2727272727272727,
-    [
-      0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-      0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-    ],
-  ],
-  "Kevin Magnussen": [
-    0,
-    0,
-    3.0,
-    22,
-    0.13636363636363635,
-    [
-      0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0,
-      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-    ],
-  ],
-  "Liam Lawson": [
-    0,
-    0,
-    NaN,
-    5,
-    NaN,
-    [
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      0.0,
-      0.0,
-      2.0,
-      0.0,
-      0.0,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-    ],
-  ],
-  "Logan Sargeant": [
-    0,
-    0,
-    1.0,
-    22,
-    0.045454545454545456,
-    [
-      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-      0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0,
-    ],
-  ],
-  "Nick De Vries": [
-    0,
-    0,
-    NaN,
-    10,
-    NaN,
-    [
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-      NaN,
-    ],
-  ],
-};
 
 export const versionThree = {
   "Max Verstappen": {
     race_wins: 19,
     podiums: 21,
-    total_points: 575.0,
-    average: 26.136363636363637,
+    total_points: 575,
+    average: 26,
     race_finishes: [
       25, 19, 25, 24, 26, 25, 26, 25, 34, 26, 26, 33, 25, 25, 10, 26, 33, 33,
       25, 33, 25, 26,
@@ -565,8 +261,8 @@ export const versionThree = {
   "Sergio Perez": {
     race_wins: 2,
     podiums: 8,
-    total_points: 285.0,
-    average: 12.954545454545455,
+    total_points: 285,
+    average: 12,
     race_finishes: [
       18, 25, 11, 33, 18, 0, 12, 9, 22, 8, 15, 18, 12, 18, 4, 0, 1, 16, 0, 18,
       15, 12,
@@ -575,8 +271,8 @@ export const versionThree = {
   "Lewis Hamilton": {
     race_wins: 0,
     podiums: 3,
-    total_points: 234.0,
-    average: 10.636363636363637,
+    total_points: 234,
+    average: 10,
     race_finishes: [
       10, 10, 18, 10, 8, 13, 18, 15, 4, 15, 12, 15, 8, 8, 16, 10, 4, 7, 19, 6,
       6, 2,
@@ -585,8 +281,8 @@ export const versionThree = {
   "Fernando Alonso": {
     race_wins: 0,
     podiums: 3,
-    total_points: 206.0,
-    average: 9.363636363636363,
+    total_points: 206,
+    average: 9,
     race_finishes: [
       15, 15, 15, 15, 15, 18, 6, 18, 14, 6, 2, 10, 19, 2, 0, 4, 9, 0, 0, 15, 2,
       6,
@@ -595,8 +291,8 @@ export const versionThree = {
   "Charles Leclerc": {
     race_wins: 0,
     podiums: 5,
-    total_points: 206.0,
-    average: 9.363636363636363,
+    total_points: 206,
+    average: 9,
     race_finishes: [
       0, 6, 0, 22, 6, 8, 0, 12, 18, 2, 6, 19, 0, 12, 12, 12, 10, 6, 15, 4, 18,
       18,
@@ -605,8 +301,8 @@ export const versionThree = {
   "Lando Norris": {
     race_wins: 1,
     podiums: 7,
-    total_points: 205.0,
-    average: 9.318181818181818,
+    total_points: 205,
+    average: 9,
     race_finishes: [
       0, 0, 8, 2, 0, 2, 0, 0, 12, 18, 18, 9, 6, 4, 18, 18, 21, 23, 10, 26, 0,
       10,
@@ -615,8 +311,8 @@ export const versionThree = {
   "Carlos Sainz": {
     race_wins: 1,
     podiums: 2,
-    total_points: 200.0,
-    average: 9.090909090909092,
+    total_points: 200,
+    average: 9,
     race_finishes: [
       12, 8, 0, 14, 10, 4, 10, 10, 14, 1, 4, 5, 10, 15, 25, 8, 3, 18, 12, 9, 8,
       0,
@@ -625,8 +321,8 @@ export const versionThree = {
   "George Russell": {
     race_wins: 0,
     podiums: 0,
-    total_points: 175.0,
-    average: 7.954545454545454,
+    total_points: 175,
+    average: 7,
     race_finishes: [
       6, 12, 0, 10, 12, 10, 15, 0, 7, 10, 8, 9, 0, 10, 0, 6, 17, 11, 8, 5, 4,
       15,
@@ -635,8 +331,8 @@ export const versionThree = {
   "Oscar Piastri": {
     race_wins: 1,
     podiums: 1,
-    total_points: 97.0,
-    average: 4.409090909090909,
+    total_points: 97,
+    average: 4,
     race_finishes: [
       0, 0, 4, 0, 0, 1, 0, 0, 0, 12, 10, 7, 2, 0, 6, 15, 26, 0, 4, 0, 2, 8,
     ],
@@ -644,8 +340,8 @@ export const versionThree = {
   "Lance Stroll": {
     race_wins: 0,
     podiums: 0,
-    total_points: 74.0,
-    average: 3.3636363636363638,
+    total_points: 74,
+    average: 3,
     race_finishes: [
       8, 0, 12, 7, 0, 0, 8, 2, 7, 0, 1, 2, 0, 0, 0, 0, 0, 6, 0, 10, 10, 1,
     ],
@@ -653,8 +349,8 @@ export const versionThree = {
   "Pierre Gasly": {
     race_wins: 0,
     podiums: 0,
-    total_points: 62.0,
-    average: 2.8181818181818183,
+    total_points: 62,
+    average: 2,
     race_finishes: [
       2, 2, 0, 0, 4, 6, 1, 0, 1, 0, 0, 6, 15, 0, 8, 1, 0, 10, 0, 6, 0, 0,
     ],
@@ -662,8 +358,8 @@ export const versionThree = {
   "Esteban Ocon": {
     race_wins: 0,
     podiums: 0,
-    total_points: 58.0,
-    average: 2.6363636363636362,
+    total_points: 58,
+    average: 2,
     race_finishes: [
       0, 4, 0, 0, 2, 15, 4, 4, 2, 0, 0, 4, 1, 0, 0, 2, 6, 0, 1, 1, 12, 0,
     ],
@@ -671,8 +367,8 @@ export const versionThree = {
   "Alex Albon": {
     race_wins: 0,
     podiums: 0,
-    total_points: 27.0,
-    average: 1.2272727272727273,
+    total_points: 27,
+    average: 1,
     race_finishes: [
       1, 0, 0, 0, 0, 0, 0, 6, 0, 4, 0, 0, 4, 6, 0, 0, 2, 2, 2, 0, 0, 0,
     ],
@@ -680,8 +376,8 @@ export const versionThree = {
   "Yuki Tsunoda": {
     race_wins: 0,
     podiums: 0,
-    total_points: 17.0,
-    average: 0.7727272727272727,
+    total_points: 17,
+    average: 0,
     race_finishes: [
       0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 5, 0, 5, 0, 4,
     ],
@@ -689,8 +385,8 @@ export const versionThree = {
   "Valterri Bottas": {
     race_wins: 0,
     podiums: 0,
-    total_points: 10.0,
-    average: 0.45454545454545453,
+    total_points: 10,
+    average: 0,
     race_finishes: [
       4, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 4, 0, 0, 0, 0, 0,
     ],
@@ -698,8 +394,8 @@ export const versionThree = {
   "Nico Hulkenberg": {
     race_wins: 0,
     podiums: 0,
-    total_points: 9.0,
-    average: 0.4090909090909091,
+    total_points: 9,
+    average: 0,
     race_finishes: [
       0, 0, 6, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     ],
@@ -707,8 +403,8 @@ export const versionThree = {
   "Daniel Ricciardo": {
     race_wins: 0,
     podiums: 0,
-    total_points: NaN,
-    average: NaN,
+    total_points: 6,
+    average: 0,
     race_finishes: [
       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0,
     ],
@@ -716,8 +412,8 @@ export const versionThree = {
   "Zhou Guanyu": {
     race_wins: 0,
     podiums: 0,
-    total_points: 6.0,
-    average: 0.2727272727272727,
+    total_points: 6,
+    average: 0,
     race_finishes: [
       0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0,
     ],
@@ -725,8 +421,8 @@ export const versionThree = {
   "Kevin Magnussen": {
     race_wins: 0,
     podiums: 0,
-    total_points: 3.0,
-    average: 0.13636363636363635,
+    total_points: 3,
+    average: 0,
     race_finishes: [
       0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
     ],
@@ -734,8 +430,8 @@ export const versionThree = {
   "Liam Lawson": {
     race_wins: 0,
     podiums: 0,
-    total_points: NaN,
-    average: NaN,
+    total_points: 2,
+    average: 0,
     race_finishes: [
       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0,
     ],
@@ -743,8 +439,8 @@ export const versionThree = {
   "Logan Sargeant": {
     race_wins: 0,
     podiums: 0,
-    total_points: 1.0,
-    average: 0.045454545454545456,
+    total_points: 1,
+    average: 0,
     race_finishes: [
       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
     ],
@@ -752,10 +448,12 @@ export const versionThree = {
   "Nick De Vries": {
     race_wins: 0,
     podiums: 0,
-    total_points: NaN,
-    average: NaN,
+    total_points: 0,
+    average: 0,
     race_finishes: [
       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     ],
   },
 };
+
+export const teamResults = {};
