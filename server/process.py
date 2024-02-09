@@ -35,7 +35,7 @@ for driver in driverlist:
             
         except:
             print("Nan Detected") 
-    average = points / race_finishes
+    average = total_points / race_finishes
 
     all_data[driver] = []
     all_data[driver].append(race_wins)
