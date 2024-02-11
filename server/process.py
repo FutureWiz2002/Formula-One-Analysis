@@ -73,7 +73,7 @@ def generateTeamData():
         teamPodiums = 0
         teamRaceWins = 0
         for i in value:
-            
+            if
 
 
 generateAllDriverData()
