@@ -6,7 +6,7 @@ df = pd.read_csv("F1_2023.csv", encoding='latin-1')
 driverlist = df['Driver']
 # print(driverlist)
 
-def driverProfile(driverName):
+def driverProfile(driverName:str):
     desired_driver_name = driverName
     result_list = df[df['Driver'].eq(desired_driver_name) & df['Driver'].notna()].values.flatten().tolist()
     result_list.pop(0)
@@ -66,14 +66,24 @@ def generateTeamData():
         "Mclaren": ["Lando Norris", "Oscar Piastri"],
         "AlphaTauri": ["Daniel Ricciardo", "Yuki Tsunoda"], 
         "Williams": ["Alex Albon", "Logan Sergeant"],
-        "Alfa Romeo":["Zhou Guanyu", "Valterri Bottas"]
+        "Alfa Romeo":["Zhou Guanyu", "Valterri Bottas"],
     }
+
+    all_data = {}
     for key, value in teamDriverPair.items():
         teamPoints = 0
         teamPodiums = 0
         teamRaceWins = 0
-        for i in value:
-            if
 
+        print(value)
+        first = driverProfile(value[0])
+        second = driverProfile(value[1])
+        
+        final = []
 
-generateAllDriverData()
+        for points in range(len(first)):
+            final.append(first[points] + second[points])
+        all_data[key] = final
+    print(json.dumps(all_data))
+
+generateTeamData()
