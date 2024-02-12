@@ -68,6 +68,12 @@ def generateTeamData():
         "Williams": ["Alex Albon", "Logan Sergeant"],
         "Alfa Romeo":["Zhou Guanyu", "Valterri Bottas"]
     }
+    for key, value in teamDriverPair.items():
+        teamPoints = 0
+        teamPodiums = 0
+        teamRaceWins = 0
+        for i in value:
+            
 
 
 generateAllDriverData()

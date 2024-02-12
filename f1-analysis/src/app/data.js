@@ -299,7 +299,7 @@ export const versionThree = {
     ],
   },
   "Lando Norris": {
-    race_wins: 1,
+    race_wins: 0,
     podiums: 7,
     total_points: 205,
     average: 9,
@@ -329,7 +329,7 @@ export const versionThree = {
     ],
   },
   "Oscar Piastri": {
-    race_wins: 1,
+    race_wins: 0,
     podiums: 1,
     total_points: 97,
     average: 4,
@@ -457,3 +457,4 @@ export const versionThree = {
 };
 
 export const teamResults = {};
+
