@@ -7,8 +7,8 @@ driverlist = df['Driver']
 # print(driverlist)
 
 def driverProfile(driverName:str):
-    desired_driver_name = driverName
-    result_list = df[df['Driver'].eq(desired_driver_name) & df['Driver'].notna()].values.flatten().tolist()
+    result_list = df[df['Driver'].eq(driverName) & df['Driver'].notna()].values.flatten().tolist()
+    
     result_list.pop(0)
     result_list.pop(0)
     return result_list
@@ -53,8 +53,6 @@ def generateAllDriverData():
 
 
 def generateTeamData():
-    teamlist = list(set(df['Constructor']))
-    print(teamlist)
 
     teamDriverPair = {
         "Red Bull": ["Max Verstappen", "Sergio Perez"],
@@ -78,11 +76,26 @@ def generateTeamData():
         print(value)
         first = driverProfile(value[0])
         second = driverProfile(value[1])
-        
         final = []
 
-        for points in range(len(first)):
+        for points in range(1, 18):
+            try:
+                if int(first[points]) >= 25:
+                    teamRaceWins += 1
+                elif int(first[points]) >= 18:
+                    teamPodiums += 1
+
+                if int(second[points]) >= 25:
+                    teamRaceWins += 1
+                elif int(second[points]) >= 25:
+                    teamPodiums += 1
+            except:
+                print("WHOOPS")
+
             final.append(first[points] + second[points])
+            print(final)
+
+        teamPoints = sum(final)
         all_data[key] = final
     print(json.dumps(all_data))
 
