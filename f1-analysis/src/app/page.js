@@ -2,7 +2,7 @@
 import Chart from 'chart.js/auto';
 import { useState } from 'react'
 import { Line } from 'react-chartjs-2';
-import { versionThree } from './data';
+import { versionThree, teamResults } from './data';
 
 const chartOptions = {
   scales: {
@@ -13,6 +13,14 @@ const chartOptions = {
   },
 };
 
+const chartOptionsTeam = {
+  scales: {
+    y: {
+      max: 55,
+      beginAtZero: true,
+    },
+  },
+};
 
 // This function renders the home page
 
@@ -20,7 +28,7 @@ export default function Home() {
   const [driver, setDriver] = useState(" ");
   const [driverinfo, setDriverinfo] = useState([]);
   const [chartData, setChartData] = useState({
-    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
+    labels:  ["BRN","SAU","AUS","AZB","MIA","MON","ESP","CAN","AUT","GBR","HUN","BEL","NED","ITA2","SIN","JPN","QAT","USA","MEX","BRA","LAS","UAE"],
     datasets: [
       {
         label: driver,
@@ -56,7 +64,7 @@ export default function Home() {
     console.log(driverinfo)
     
     setChartData({
-      labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+      labels:  ["BRN","SAU","AUS","AZB","MIA","MON","ESP","CAN","AUT","GBR","HUN","BEL","NED","ITA2","SIN","JPN","QAT","USA","MEX","BRA","LAS","UAE"],
       datasets: [
         {
           label:selectedDriver,
@@ -70,17 +78,34 @@ export default function Home() {
   
   // This section is for the teams
   const [team, setTeam] = useState("");
-  const [teamData, setTeamData] = useState();
+  const [teamData, setTeamData] = useState({
+    labels:  ["BRN","SAU","AUS","AZB","MIA","MON","ESP","CAN","AUT","GBR","HUN","BEL","NED","ITA2","SIN","JPN","QAT","USA","MEX","BRA","LAS","UAE"],
+    datasets: [
+      {
+        label: team,
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0],
+      }
+    ]
+  });
 
   const changeTeam = (e) => {
     const newTeam = e.target.value;
     setTeam(newTeam)
     console.log(newTeam)
+    setTeamData({
+      labels:  ["BRN","SAU","AUS","AZB","MIA","MON","ESP","CAN","AUT","GBR","HUN","BEL","NED","ITA2","SIN","JPN","QAT","USA","MEX","BRA","LAS","UAE"],
+      datasets: [
+        {
+          label: team,
+          data: teamResults[team]
+        }
+      ]
+    })
   }
   const [driver1, setDriver1] = useState("");
   const [driver2, setDriver2] = useState("");
   const [comapareDriver, setCompareDriver] = useState({
-    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
+    labels:  ["BRN","SAU","AUS","AZB","MIA","MON","ESP","CAN","AUT","GBR","HUN","BEL","NED","ITA2","SIN","JPN","QAT","USA","MEX","BRA","LAS","UAE"],
     datasets: [
       {
         label: driver1,
@@ -174,7 +199,7 @@ export default function Home() {
 
 
     setCompareDriver({
-      labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22],
+      labels: ["BRN","SAU","AUS","AZB","MIA","MON","ESP","CAN","AUT","GBR","HUN","BEL","NED","ITA2","SIN","JPN","QAT","USA","MEX","BRA","LAS","UAE"],
       datasets: [
         {
           label: driver1,
@@ -261,7 +286,7 @@ export default function Home() {
         </select>
       </div>
       <div className='flex-1 mx-20 p-10 flex-1'>
-          <Line data={chartData} options={chartOptions}/>
+          <Line data={teamData} options={chartOptionsTeam}/>
       </div>
 
       {/* Comparing Drivers */}
@@ -291,7 +316,7 @@ export default function Home() {
             <option value="Alex Albon">Alex Albon</option>
           </select>
           <select className='mx-10 my-4 p-3 bg-[#FF1801] flex-1' value={driver2} onChange={updateDriver2}>
-            <option value=""></option>
+            {/* <option value=""></option> */}
             <option value="Max Verstappen">Max Verstappen</option>
             <option value="Sergio Perez">Sergio</option>
             <option value="Charles Leclerc">Charles Leclerc</option>
@@ -319,7 +344,7 @@ export default function Home() {
         {/* graph for comparing drivers */}
 
         <div>
-          <Line data={comapareDriver}/>
+          <Line data={comapareDriver} option={chartOptions}/>
         </div>
       </div>
 

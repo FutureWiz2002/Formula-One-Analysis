@@ -83,7 +83,7 @@ def generateTeamData():
         second = driverProfile(value[1])
         final = []
 
-        for points in range(1, 18):
+        for points in range(len(first)):
             try:
                 if int(first[points]) >= 25:
                     teamRaceWins += 1
@@ -94,20 +94,20 @@ def generateTeamData():
                     teamRaceWins += 1
                 elif int(second[points]) >= 25:
                     teamPodiums += 1
-                final.append(first[points] + second[points])
-            except:
-                print("WHOOPS")
-            
-            try:
                 final.append(int(first[points] + second[points]))
             except:
+                print("WHOOPS")
                 try:
-                    final.append(int(first[points]))
+                    final.append(int(first[points] + second[points]))
                 except:
                     try:
-                        final.appedn(int(second[points]))
+                        final.append(int(first[points]))
                     except:
-                        print("Something is horribly wrong, just quit bro")
+                        try:
+                            final.appedn(int(second[points]))
+                        except:
+                            print("Something is horribly wrong, just quit bro")
+                            final.append(0)
 
         teamPoints = int(sum(final))
         all_data[key] = final
