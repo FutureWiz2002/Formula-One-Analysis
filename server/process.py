@@ -6,11 +6,16 @@ df = pd.read_csv("F1_2023.csv", encoding='latin-1')
 driverlist = df['Driver']
 # print(driverlist)
 
-def driverProfile(driverName:str):
-    result_list = df[df['Driver'].eq(driverName) & df['Driver'].notna()].values.flatten().tolist()
+def driverProfile(driverName: str):
+    result_df = df[df['Driver'].eq(driverName) & df['Driver'].notna()]
+
+    if result_df.empty:
+        return []
+
+    result_list = result_df.values.flatten().tolist()
+    result_list.pop(0)
+    result_list.pop(0)
     
-    result_list.pop(0)
-    result_list.pop(0)
     return result_list
 
 all_data = {}
@@ -58,7 +63,7 @@ def generateTeamData():
         "Red Bull": ["Max Verstappen", "Sergio Perez"],
         "Mercedes": ["Lewis Hamilton", "George Russell"],
         "Aston Martin": ["Fernando Alonso", "Lance Stroll"],
-        "Ferrar": ["Charles Leclerc", "Carlos Sainz"],
+        "Ferrari": ["Charles Leclerc", "Carlos Sainz"],
         "Alpine": ["Esteban Ocon", "Pierre Gasly"],
         "Haas": ["Nico Hulkenberg", "Kevin Magnussen"],
         "Mclaren": ["Lando Norris", "Oscar Piastri"],
@@ -89,14 +94,24 @@ def generateTeamData():
                     teamRaceWins += 1
                 elif int(second[points]) >= 25:
                     teamPodiums += 1
+                final.append(first[points] + second[points])
             except:
                 print("WHOOPS")
+            
+            try:
+                final.append(int(first[points] + second[points]))
+            except:
+                try:
+                    final.append(int(first[points]))
+                except:
+                    try:
+                        final.appedn(int(second[points]))
+                    except:
+                        print("Something is horribly wrong, just quit bro")
 
-            final.append(first[points] + second[points])
-            print(final)
-
-        teamPoints = sum(final)
+        teamPoints = int(sum(final))
         all_data[key] = final
+        print(final)
     print(json.dumps(all_data))
 
 generateTeamData()
